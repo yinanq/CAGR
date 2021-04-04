@@ -30,6 +30,9 @@ struct ContentView: View {
                     .background(Color.white)
                     .cornerRadius(CAGRCornerRadius)
                     .offset(y: CAGRCellHeight + CAGRPadding)
+                    .onTapGesture {
+                        print("1/f(x)=From")
+                    }
                     
                     VStack {
                     }
@@ -37,6 +40,9 @@ struct ContentView: View {
                     .background(Color.white)
                     .cornerRadius(CAGRCornerRadius)
                     .offset(y: CAGRCellHeight * 2 + CAGRPadding * 2)
+                    .onTapGesture {
+                        print("2/f(x)=From")
+                    }
                     
                     VStack {
                     }
