@@ -11,6 +11,7 @@
 		F544CA2326196A2800E90D03 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F544CA2226196A2800E90D03 /* ContentView.swift */; };
 		F544CA2526196A2900E90D03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F544CA2426196A2900E90D03 /* Assets.xcassets */; };
 		F544CA2826196A2900E90D03 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F544CA2726196A2900E90D03 /* Preview Assets.xcassets */; };
+		F54DB0DB26198EE300C2DB97 /* CAGRConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54DB0DA26198EE300C2DB97 /* CAGRConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		F544CA2426196A2900E90D03 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F544CA2726196A2900E90D03 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F544CA2926196A2900E90D03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F54DB0DA26198EE300C2DB97 /* CAGRConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAGRConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			children = (
 				F544CA2026196A2800E90D03 /* CAGRApp.swift */,
 				F544CA2226196A2800E90D03 /* ContentView.swift */,
+				F54DB0DA26198EE300C2DB97 /* CAGRConstants.swift */,
 				F544CA2426196A2900E90D03 /* Assets.xcassets */,
 				F544CA2926196A2900E90D03 /* Info.plist */,
 				F544CA2626196A2900E90D03 /* Preview Content */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F544CA2326196A2800E90D03 /* ContentView.swift in Sources */,
+				F54DB0DB26198EE300C2DB97 /* CAGRConstants.swift in Sources */,
 				F544CA2126196A2800E90D03 /* CAGRApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

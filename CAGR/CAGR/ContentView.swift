@@ -7,13 +7,6 @@
 
 import SwiftUI
 
-let screenWidth = UIScreen.main.bounds.size.width
-let screenHeight = UIScreen.main.bounds.size.height
-let CAGRPadding: CGFloat = screenHeight * 0.03
-let CAGRCellHeight: CGFloat = screenHeight * 0.12
-let CAGRCornerRadius: CGFloat = 18
-let CAGRCellColor = Color.white
-
 struct ContentView: View {
     var body: some View {
         ZStack {
@@ -41,7 +34,7 @@ struct ContentView: View {
                     .cornerRadius(CAGRCornerRadius)
                     .offset(y: CAGRCellHeight * 2 + CAGRPadding * 2)
                     .onTapGesture {
-                        print("2/f(x)=From")
+                        print("2/f(x)=To")
                     }
                     
                     VStack {
