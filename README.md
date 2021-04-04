@@ -1,2 +1,2 @@
 # CAGR
- a UIKit app
+ a SwiftUI app
