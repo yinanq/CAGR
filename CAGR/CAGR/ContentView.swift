@@ -10,8 +10,10 @@ import SwiftUI
 struct ContentView: View {
     
     @State private var isMars = false
+    @State private var output = Output.cagr
     
     var body: some View {
+        
         ZStack {
             CAGRCellColor
                 .edgesIgnoringSafeArea(.all)

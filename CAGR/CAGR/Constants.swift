@@ -7,6 +7,13 @@
 
 import SwiftUI
 
+enum Output {
+    case fromValue
+    case toValue
+    case years
+    case cagr
+}
+
 let screenWidth = UIScreen.main.bounds.size.width
 let screenHeight = UIScreen.main.bounds.size.height
 let CAGRPadding: CGFloat = screenHeight * 0.03
