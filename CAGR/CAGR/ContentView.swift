@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State private var isMars = false
+    
     var body: some View {
         ZStack {
             CAGRCellColor
@@ -19,12 +22,17 @@ struct ContentView: View {
                     
                     VStack {
                     }
-                    .frame(width: screenWidth - CAGRPadding * 2, height: CAGRCellHeight)
-                    .background(Color.white)
-                    .cornerRadius(CAGRCornerRadius)
-                    .offset(y: CAGRCellHeight + CAGRPadding)
+//                    .frame(width: screenWidth - CAGRPadding * 2, height: CAGRCellHeight)
+                    .frame(width: isMars ? screenWidth : screenWidth - CAGRPadding * 2, height: CAGRCellHeight)
+                    .background(Color.red)
+//                    .cornerRadius(CAGRCornerRadius)
+                    .cornerRadius(isMars ? 0 : CAGRCornerRadius)
+//                    .offset(y: CAGRCellHeight + CAGRPadding)
+                    .offset(y: isMars ? 0 : CAGRCellHeight + CAGRPadding)
+                    .animation(.easeInOut)
                     .onTapGesture {
                         print("1/f(x)=From")
+                        isMars.toggle()
                     }
                     
                     VStack {
@@ -49,10 +57,14 @@ struct ContentView: View {
                     
                     VStack {
                     }
-                    .frame(width: screenWidth, height:  CAGRCellHeight)
+//                    .frame(width: screenWidth, height:  CAGRCellHeight)
+                    .frame(width: isMars ? screenWidth - CAGRPadding * 2 : screenWidth, height:  CAGRCellHeight)
                     .background(Color.white)
-                    .cornerRadius(0)
-                    .padding(.top, 0)
+//                    .cornerRadius(0)
+                    .cornerRadius(isMars ? CAGRCornerRadius : 0)
+//                    .offset(y: 0)
+                    .offset(y: isMars ? CAGRCellHeight + CAGRPadding : 0)
+                    .animation(.easeInOut)
                 }
                 
                 HStack { //custom number pad
