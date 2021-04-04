@@ -50,6 +50,9 @@ struct ContentView: View {
                     .background(Color.white)
                     .cornerRadius(CAGRCornerRadius)
                     .offset(y: CAGRCellHeight * 3 + CAGRPadding * 3)
+                    .onTapGesture {
+                        print("3/f(x)=Years")
+                    }
                     
                     VStack {
                     }
@@ -61,7 +64,7 @@ struct ContentView: View {
                 
                 HStack { //custom number pad
                 }
-                .frame(width: screenWidth, height: screenHeight * 0.3)
+                .frame(width: screenWidth, height: screenHeight * 0.29)
                 .background(Color.green)
             }
         }
