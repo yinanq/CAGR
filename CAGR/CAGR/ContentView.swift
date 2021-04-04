@@ -7,10 +7,58 @@
 
 import SwiftUI
 
+let screenWidth = UIScreen.main.bounds.size.width
+let screenHeight = UIScreen.main.bounds.size.height
+let CAGRPadding: CGFloat = screenHeight * 0.03
+let CAGRCellHeight: CGFloat = screenHeight * 0.12
+let CAGRCornerRadius: CGFloat = 18
+let CAGRCellColor = Color.white
+
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        ZStack {
+            CAGRCellColor
+                .edgesIgnoringSafeArea(.all)
+            
+            VStack {
+                ZStack(alignment: .top) {
+                    Color.gray
+                    
+                    VStack {
+                    }
+                    .frame(width: screenWidth - CAGRPadding * 2, height: CAGRCellHeight)
+                    .background(Color.white)
+                    .cornerRadius(CAGRCornerRadius)
+                    .offset(y: CAGRCellHeight + CAGRPadding)
+                    
+                    VStack {
+                    }
+                    .frame(width: screenWidth - CAGRPadding * 2, height: CAGRCellHeight)
+                    .background(Color.white)
+                    .cornerRadius(CAGRCornerRadius)
+                    .offset(y: CAGRCellHeight * 2 + CAGRPadding * 2)
+                    
+                    VStack {
+                    }
+                    .frame(width: screenWidth - CAGRPadding * 2, height: CAGRCellHeight)
+                    .background(Color.white)
+                    .cornerRadius(CAGRCornerRadius)
+                    .offset(y: CAGRCellHeight * 3 + CAGRPadding * 3)
+                    
+                    VStack {
+                    }
+                    .frame(width: screenWidth, height:  CAGRCellHeight)
+                    .background(Color.white)
+                    .cornerRadius(0)
+                    .padding(.top, 0)
+                }
+                
+                HStack { //custom number pad
+                }
+                .frame(width: screenWidth, height: screenHeight * 0.3)
+                .background(Color.green)
+            }
+        }
     }
 }
 
