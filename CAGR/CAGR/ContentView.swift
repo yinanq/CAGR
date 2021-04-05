@@ -22,6 +22,10 @@ struct ContentView: View {
     @State private var tovY = CAGRCellY2
     @State private var yrsY = CAGRCellY3
     @State private var cagrY: CGFloat = 0
+//    @State private var frvZI: Double = 0
+//    @State private var tovZI: Double = 0
+//    @State private var yrsZI: Double = 0
+//    @State private var cagrZI: Double = 0
     
     var body: some View {
         
@@ -34,10 +38,12 @@ struct ContentView: View {
                     Color.gray
                     
                     VStack {
+                        Text("from")
                     }
                     .frame(width: frvW, height: CAGRCellHeight)
                     .background(Color.white)
                     .cornerRadius(frvCR)
+//                    .zIndex(frvZI)
                     .offset(y: frvY)
                     .animation(.easeInOut)
                     .onTapGesture {
@@ -56,10 +62,12 @@ struct ContentView: View {
                     }
                     
                     VStack {
+                        Text("to")
                     }
                     .frame(width: tovW, height: CAGRCellHeight)
                     .background(Color.white)
                     .cornerRadius(tovCR)
+//                    .zIndex(tovZI)
                     .offset(y: tovY)
                     .animation(.easeInOut)
                     .onTapGesture {
@@ -78,10 +86,12 @@ struct ContentView: View {
                     }
                     
                     VStack {
+                        Text("years")
                     }
                     .frame(width: yrsW, height: CAGRCellHeight)
                     .background(Color.white)
                     .cornerRadius(yrsCR)
+//                    .zIndex(yrsZI)
                     .offset(y: yrsY)
                     .animation(.easeInOut)
                     .onTapGesture {
@@ -100,10 +110,12 @@ struct ContentView: View {
                     }
                     
                     VStack {
+                        Text("CAGR")
                     }
                     .frame(width: cagrW, height: CAGRCellHeight)
                     .background(Color.white)
                     .cornerRadius(cagrCR)
+//                    .zIndex(cagrZI)
                     .offset(y: cagrY)
                     .animation(.easeInOut)
                     .onTapGesture {
