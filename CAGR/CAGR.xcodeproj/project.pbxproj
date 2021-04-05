@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F57696CB261A817500C21A56 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57696CA261A817500C21A56 /* ContentViewModel.swift */; };
 		F5F90681261994B20015628A /* cagrApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F90680261994B20015628A /* cagrApp.swift */; };
 		F5F90683261994B20015628A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F90682261994B20015628A /* ContentView.swift */; };
 		F5F90685261994B30015628A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5F90684261994B30015628A /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F57696CA261A817500C21A56 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		F5F9067D261994B20015628A /* cagr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cagr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5F90680261994B20015628A /* cagrApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cagrApp.swift; sourceTree = "<group>"; };
 		F5F90682261994B20015628A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 			children = (
 				F5F90680261994B20015628A /* cagrApp.swift */,
 				F5F90682261994B20015628A /* ContentView.swift */,
+				F57696CA261A817500C21A56 /* ContentViewModel.swift */,
 				F5F90690261994DA0015628A /* Constants.swift */,
 				F5F90684261994B30015628A /* Assets.xcassets */,
 				F5F90689261994B30015628A /* Info.plist */,
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F57696CB261A817500C21A56 /* ContentViewModel.swift in Sources */,
 				F5F90683261994B20015628A /* ContentView.swift in Sources */,
 				F5F90691261994DA0015628A /* Constants.swift in Sources */,
 				F5F90681261994B20015628A /* cagrApp.swift in Sources */,

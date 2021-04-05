@@ -16,7 +16,11 @@ enum Output {
 
 let screenWidth = UIScreen.main.bounds.size.width
 let screenHeight = UIScreen.main.bounds.size.height
-let CAGRPadding: CGFloat = screenHeight * 0.03
-let CAGRCellHeight: CGFloat = screenHeight * 0.12
+let CAGRPadding = screenHeight * 0.03
+let CAGRCellWidth = screenWidth - CAGRPadding * 2
+let CAGRCellHeight = screenHeight * 0.12
 let CAGRCornerRadius: CGFloat = 18
 let CAGRCellColor = Color.white
+let CAGRCellY1 = CAGRCellHeight + CAGRPadding
+let CAGRCellY2 = CAGRCellHeight * 2 + CAGRPadding * 2
+let CAGRCellY3 = CAGRCellHeight * 3 + CAGRPadding * 3
