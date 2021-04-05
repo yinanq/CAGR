@@ -22,28 +22,34 @@ struct ContentView: View {
     @State private var tovY = CAGRCellY2
     @State private var yrsY = CAGRCellY3
     @State private var cagrY: CGFloat = 0
-//    @State private var frvZI: Double = 0
-//    @State private var tovZI: Double = 0
-//    @State private var yrsZI: Double = 0
-//    @State private var cagrZI: Double = 0
     
     var body: some View {
         
         ZStack {
-            CAGRCellColor
+            Color("cell")
                 .edgesIgnoringSafeArea(.all)
             
             VStack {
                 ZStack(alignment: .top) {
-                    Color.gray
+                    Color("bg")
                     
-                    VStack {
-                        Text("from")
+                    HStack {
+                        VStack(alignment: .leading, spacing: 4) {
+                            Text("from")
+                                .foregroundColor(Color("text"))
+                                .font(.custom(CAGRFont, size: 24))
+                            Image(systemName: "arrow.up.circle")
+                                .font(Font.title2.weight(.thin))
+                        }
+                        Spacer()
+                        Text("147")
+                            .foregroundColor(Color("text"))
+                            .font(.custom(CAGRFont, size: 64))
                     }
+                    .padding(CAGRPadding)
                     .frame(width: frvW, height: CAGRCellHeight)
-                    .background(Color.white)
+                    .background(Color("cell"))
                     .cornerRadius(frvCR)
-//                    .zIndex(frvZI)
                     .offset(y: frvY)
                     .animation(.easeInOut)
                     .onTapGesture {
@@ -63,11 +69,12 @@ struct ContentView: View {
                     
                     VStack {
                         Text("to")
+                            .foregroundColor(Color("text"))
+                            .font(.custom(CAGRFont, size: 24))
                     }
                     .frame(width: tovW, height: CAGRCellHeight)
-                    .background(Color.white)
+                    .background(Color("cell"))
                     .cornerRadius(tovCR)
-//                    .zIndex(tovZI)
                     .offset(y: tovY)
                     .animation(.easeInOut)
                     .onTapGesture {
@@ -87,11 +94,12 @@ struct ContentView: View {
                     
                     VStack {
                         Text("years")
+                            .foregroundColor(Color("text"))
+                            .font(.custom(CAGRFont, size: 24))
                     }
                     .frame(width: yrsW, height: CAGRCellHeight)
-                    .background(Color.white)
+                    .background(Color("cell"))
                     .cornerRadius(yrsCR)
-//                    .zIndex(yrsZI)
                     .offset(y: yrsY)
                     .animation(.easeInOut)
                     .onTapGesture {
@@ -111,11 +119,12 @@ struct ContentView: View {
                     
                     VStack {
                         Text("CAGR")
+                            .foregroundColor(Color("text"))
+                            .font(.custom(CAGRFont, size: 24))
                     }
                     .frame(width: cagrW, height: CAGRCellHeight)
-                    .background(Color.white)
+                    .background(Color("cell"))
                     .cornerRadius(cagrCR)
-//                    .zIndex(cagrZI)
                     .offset(y: cagrY)
                     .animation(.easeInOut)
                     .onTapGesture {
@@ -137,7 +146,7 @@ struct ContentView: View {
                 HStack { //custom number pad
                 }
                 .frame(width: screenWidth, height: screenHeight * 0.29)
-                .background(Color.white)
+                .background(Color("cell"))
             }
         }
     }
@@ -146,5 +155,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            
     }
 }

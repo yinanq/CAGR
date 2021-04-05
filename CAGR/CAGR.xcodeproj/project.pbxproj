@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F571F0F9261BC6FF002E3C9E /* Gruppo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F571F0F7261BC6FF002E3C9E /* Gruppo-Regular.ttf */; };
+		F571F0FA261BC6FF002E3C9E /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = F571F0F8261BC6FF002E3C9E /* OFL.txt */; };
 		F57696CB261A817500C21A56 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57696CA261A817500C21A56 /* ContentViewModel.swift */; };
 		F5F90681261994B20015628A /* cagrApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F90680261994B20015628A /* cagrApp.swift */; };
 		F5F90683261994B20015628A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F90682261994B20015628A /* ContentView.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F571F0F7261BC6FF002E3C9E /* Gruppo-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gruppo-Regular.ttf"; sourceTree = "<group>"; };
+		F571F0F8261BC6FF002E3C9E /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
 		F57696CA261A817500C21A56 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		F5F9067D261994B20015628A /* cagr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cagr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5F90680261994B20015628A /* cagrApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cagrApp.swift; sourceTree = "<group>"; };
@@ -37,6 +41,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F571F0F6261BC69B002E3C9E /* Font-Gruppo */ = {
+			isa = PBXGroup;
+			children = (
+				F571F0F7261BC6FF002E3C9E /* Gruppo-Regular.ttf */,
+				F571F0F8261BC6FF002E3C9E /* OFL.txt */,
+			);
+			path = "Font-Gruppo";
+			sourceTree = "<group>";
+		};
 		F5F90674261994B20015628A = {
 			isa = PBXGroup;
 			children = (
@@ -60,6 +73,7 @@
 				F5F90682261994B20015628A /* ContentView.swift */,
 				F57696CA261A817500C21A56 /* ContentViewModel.swift */,
 				F5F90690261994DA0015628A /* Constants.swift */,
+				F571F0F6261BC69B002E3C9E /* Font-Gruppo */,
 				F5F90684261994B30015628A /* Assets.xcassets */,
 				F5F90689261994B30015628A /* Info.plist */,
 				F5F90686261994B30015628A /* Preview Content */,
@@ -134,6 +148,8 @@
 			files = (
 				F5F90688261994B30015628A /* Preview Assets.xcassets in Resources */,
 				F5F90685261994B30015628A /* Assets.xcassets in Resources */,
+				F571F0FA261BC6FF002E3C9E /* OFL.txt in Resources */,
+				F571F0F9261BC6FF002E3C9E /* Gruppo-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
