@@ -9,8 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State private var isMars = false
-    @StateObject var viewModel = ContentViewModel()
+//    @StateObject var viewModel = ContentViewModel()
     @State private var frvW = CAGRCellWidth
     @State private var tovW = CAGRCellWidth
     @State private var yrsW = CAGRCellWidth
@@ -36,21 +35,12 @@ struct ContentView: View {
                     
                     VStack {
                     }
-//                    .frame(width: screenWidth - CAGRPadding * 2, height: CAGRCellHeight)
-//                    .frame(width: isMars ? screenWidth : screenWidth - CAGRPadding * 2, height: CAGRCellHeight)
                     .frame(width: frvW, height: CAGRCellHeight)
-                    .background(Color.red)
-//                    .cornerRadius(CAGRCornerRadius)
-//                    .cornerRadius(isMars ? 0 : CAGRCornerRadius)
+                    .background(Color.white)
                     .cornerRadius(frvCR)
-//                    .offset(y: CAGRCellHeight + CAGRPadding)
-//                    .offset(y: isMars ? 0 : CAGRCellHeight + CAGRPadding)
                     .offset(y: frvY)
                     .animation(.easeInOut)
                     .onTapGesture {
-                        print("1/f(x)=From")
-//                        isMars.toggle()
-//                        viewModel.selectedOutput = .fromValue
                         frvW = screenWidth
                         tovW = CAGRCellWidth
                         yrsW = CAGRCellWidth
@@ -67,17 +57,12 @@ struct ContentView: View {
                     
                     VStack {
                     }
-//                    .frame(width: screenWidth - CAGRPadding * 2, height: CAGRCellHeight)
                     .frame(width: tovW, height: CAGRCellHeight)
-                    .background(Color.yellow)
-//                    .cornerRadius(CAGRCornerRadius)
+                    .background(Color.white)
                     .cornerRadius(tovCR)
-//                    .offset(y: CAGRCellHeight * 2 + CAGRPadding * 2)
                     .offset(y: tovY)
                     .animation(.easeInOut)
                     .onTapGesture {
-                        print("2/f(x)=To")
-//                        viewModel.selectedOutput = .toValue
                         frvW = CAGRCellWidth
                         tovW = screenWidth
                         yrsW = CAGRCellWidth
@@ -94,17 +79,12 @@ struct ContentView: View {
                     
                     VStack {
                     }
-//                    .frame(width: screenWidth - CAGRPadding * 2, height: CAGRCellHeight)
                     .frame(width: yrsW, height: CAGRCellHeight)
-                    .background(Color.blue)
-//                    .cornerRadius(CAGRCornerRadius)
+                    .background(Color.white)
                     .cornerRadius(yrsCR)
-//                    .offset(y: CAGRCellHeight * 3 + CAGRPadding * 3)
                     .offset(y: yrsY)
                     .animation(.easeInOut)
                     .onTapGesture {
-                        print("3/f(x)=Years")
-//                        viewModel.selectedOutput = .years
                         frvW = CAGRCellWidth
                         tovW = CAGRCellWidth
                         yrsW = screenWidth
@@ -121,20 +101,12 @@ struct ContentView: View {
                     
                     VStack {
                     }
-//                    .frame(width: screenWidth, height:  CAGRCellHeight)
-//                    .frame(width: isMars ? screenWidth - CAGRPadding * 2 : screenWidth, height:  CAGRCellHeight)
                     .frame(width: cagrW, height: CAGRCellHeight)
-                    .background(Color.green)
-//                    .cornerRadius(0)
-//                    .cornerRadius(isMars ? CAGRCornerRadius : 0)
+                    .background(Color.white)
                     .cornerRadius(cagrCR)
-//                    .offset(y: 0)
-//                    .offset(y: isMars ? CAGRCellHeight + CAGRPadding : 0)
                     .offset(y: cagrY)
                     .animation(.easeInOut)
                     .onTapGesture {
-                        print("3/f(x)=CAGR")
-//                        viewModel.selectedOutput = .cagr
                         frvW = CAGRCellWidth
                         tovW = CAGRCellWidth
                         yrsW = CAGRCellWidth
@@ -153,7 +125,7 @@ struct ContentView: View {
                 HStack { //custom number pad
                 }
                 .frame(width: screenWidth, height: screenHeight * 0.29)
-                .background(Color.green)
+                .background(Color.white)
             }
         }
     }
