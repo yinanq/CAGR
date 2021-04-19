@@ -70,9 +70,9 @@
 			isa = PBXGroup;
 			children = (
 				F5F90680261994B20015628A /* cagrApp.swift */,
+				F5F90690261994DA0015628A /* Constants.swift */,
 				F5F90682261994B20015628A /* ContentView.swift */,
 				F57696CA261A817500C21A56 /* ContentViewModel.swift */,
-				F5F90690261994DA0015628A /* Constants.swift */,
 				F571F0F6261BC69B002E3C9E /* Font-Gruppo */,
 				F5F90684261994B30015628A /* Assets.xcassets */,
 				F5F90689261994B30015628A /* Info.plist */,
@@ -304,7 +304,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = studio.yinan.cagr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -326,7 +326,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = studio.yinan.cagr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
