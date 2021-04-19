@@ -11,6 +11,11 @@ struct ContentView: View {
 
 //    @StateObject var viewModel = ContentViewModel()
     
+    @State private var frvIsOutput = false
+    @State private var tovIsOutput = false
+    @State private var yrsIsOutput = false
+    @State private var cagrIsOutput = true
+    
     @State private var frvW = CAGRCellWidth
     @State private var tovW = CAGRCellWidth
     @State private var yrsW = CAGRCellWidth
@@ -46,114 +51,177 @@ struct ContentView: View {
                                 cagrY = 0
                             }
 
-                        HStack {
-                            VStack(alignment: .leading, spacing: 4) {
+                        GeometryReader { geometry in
+                            HStack {
                                 Text("from")
                                     .foregroundColor(Color("text"))
                                     .font(.custom(CAGRFont, size: 24))
-                                Image(systemName: "arrow.up.circle")
-                                    .font(Font.title2.weight(.thin))
+                                    .frame(width: geometry.size.height, height: geometry.size.height)
+                                    .background(Color("cell"))
+                                    .onTapGesture {
+                                        frvIsOutput = true
+                                        tovIsOutput = false
+                                        yrsIsOutput = false
+                                        cagrIsOutput = false
+                                        frvW = UIScreen.main.bounds.size.width
+                                        tovW = CAGRCellWidth
+                                        yrsW = CAGRCellWidth
+                                        cagrW = CAGRCellWidth
+                                        frvCR = 0
+                                        tovCR = CAGRCornerRadius
+                                        yrsCR = CAGRCornerRadius
+                                        cagrCR = CAGRCornerRadius
+                                        frvY = 0
+                                        tovY = cellHeight + CAGRPadding
+                                        yrsY = (cellHeight + CAGRPadding) * 2
+                                        cagrY = (cellHeight + CAGRPadding) * 3
+                                    }
+                                Spacer()
+                                    .frame(width: CAGRGap, height: geometry.size.height)
+                                    .background(Color(frvIsOutput ? "cell" : "bg"))
+                                Text("10")
+                                    .foregroundColor(Color("text"))
+                                    .font(.custom(CAGRFont, size: 64))
+                                    .padding(.trailing, CAGRPadding)
+                                    .frame(width: geometry.size.width - geometry.size.height - CAGRGap,
+                                           height: geometry.size.height,
+                                           alignment: .trailing)
                             }
-                            Spacer()
-                            Text("147")
-                                .foregroundColor(Color("text"))
-                                .font(.custom(CAGRFont, size: 64))
                         }
-                        .padding(CAGRPadding)
                         .frame(width: frvW, height: cellHeight)
                         .background(Color("cell"))
                         .cornerRadius(frvCR)
                         .offset(y: frvY)
                         .animation(.easeInOut)
-                        .onTapGesture {
-                            frvW = UIScreen.main.bounds.size.width
-                            tovW = CAGRCellWidth
-                            yrsW = CAGRCellWidth
-                            cagrW = CAGRCellWidth
-                            frvCR = 0
-                            tovCR = CAGRCornerRadius
-                            yrsCR = CAGRCornerRadius
-                            cagrCR = CAGRCornerRadius
-                            frvY = 0
-                            tovY = cellHeight + CAGRPadding
-                            yrsY = (cellHeight + CAGRPadding) * 2
-                            cagrY = (cellHeight + CAGRPadding) * 3
-                        }
 
-                        VStack {
-                            Text("to")
-                                .foregroundColor(Color("text"))
-                                .font(.custom(CAGRFont, size: 24))
+                        GeometryReader { geometry in
+                            HStack {
+                                Text("to")
+                                    .foregroundColor(Color("text"))
+                                    .font(.custom(CAGRFont, size: 24))
+                                    .frame(width: geometry.size.height, height: geometry.size.height)
+                                    .background(Color("cell"))
+                                    .onTapGesture {
+                                        frvIsOutput = false
+                                        tovIsOutput = true
+                                        yrsIsOutput = false
+                                        cagrIsOutput = false
+                                        frvW = CAGRCellWidth
+                                        tovW = UIScreen.main.bounds.size.width
+                                        yrsW = CAGRCellWidth
+                                        cagrW = CAGRCellWidth
+                                        frvCR = CAGRCornerRadius
+                                        tovCR = 0
+                                        yrsCR = CAGRCornerRadius
+                                        cagrCR = CAGRCornerRadius
+                                        frvY = cellHeight + CAGRPadding
+                                        tovY = 0
+                                        yrsY = (cellHeight + CAGRPadding) * 2
+                                        cagrY = (cellHeight + CAGRPadding) * 3
+                                    }
+                                Spacer()
+                                    .frame(width: CAGRGap, height: geometry.size.height)
+                                    .background(Color(tovIsOutput ? "cell" : "bg"))
+                                Text("69")
+                                    .foregroundColor(Color("text"))
+                                    .font(.custom(CAGRFont, size: 64))
+                                    .padding(.trailing, CAGRPadding)
+                                    .frame(width: geometry.size.width - geometry.size.height - CAGRGap,
+                                           height: geometry.size.height,
+                                           alignment: .trailing)
+                            }
                         }
                         .frame(width: tovW, height: cellHeight)
                         .background(Color("cell"))
                         .cornerRadius(tovCR)
                         .offset(y: tovY)
                         .animation(.easeInOut)
-                        .onTapGesture {
-                            frvW = CAGRCellWidth
-                            tovW = UIScreen.main.bounds.size.width
-                            yrsW = CAGRCellWidth
-                            cagrW = CAGRCellWidth
-                            frvCR = CAGRCornerRadius
-                            tovCR = 0
-                            yrsCR = CAGRCornerRadius
-                            cagrCR = CAGRCornerRadius
-                            frvY = cellHeight + CAGRPadding
-                            tovY = 0
-                            yrsY = (cellHeight + CAGRPadding) * 2
-                            cagrY = (cellHeight + CAGRPadding) * 3
-                        }
 
-                        VStack {
-                            Text("years")
-                                .foregroundColor(Color("text"))
-                                .font(.custom(CAGRFont, size: 24))
+                        GeometryReader { geometry in
+                            HStack {
+                                Text("years")
+                                    .foregroundColor(Color("text"))
+                                    .font(.custom(CAGRFont, size: 24))
+                                    .frame(width: geometry.size.height, height: geometry.size.height)
+                                    .background(Color("cell"))
+                                    .onTapGesture {
+                                        frvIsOutput = false
+                                        tovIsOutput = false
+                                        yrsIsOutput = true
+                                        cagrIsOutput = false
+                                        frvW = CAGRCellWidth
+                                        tovW = CAGRCellWidth
+                                        yrsW = UIScreen.main.bounds.size.width
+                                        cagrW = CAGRCellWidth
+                                        frvCR = CAGRCornerRadius
+                                        tovCR = CAGRCornerRadius
+                                        yrsCR = 0
+                                        cagrCR = CAGRCornerRadius
+                                        frvY = cellHeight + CAGRPadding
+                                        tovY = (cellHeight + CAGRPadding) * 2
+                                        yrsY = 0
+                                        cagrY = (cellHeight + CAGRPadding) * 3
+                                    }
+                                Spacer()
+                                    .frame(width: CAGRGap, height: geometry.size.height)
+                                    .background(Color(yrsIsOutput ? "cell" : "bg"))
+                                Text("5")
+                                    .foregroundColor(Color("text"))
+                                    .font(.custom(CAGRFont, size: 64))
+                                    .padding(.trailing, CAGRPadding)
+                                    .frame(width: geometry.size.width - geometry.size.height - CAGRGap,
+                                           height: geometry.size.height,
+                                           alignment: .trailing)
+                            }
                         }
                         .frame(width: yrsW, height: cellHeight)
                         .background(Color("cell"))
                         .cornerRadius(yrsCR)
                         .offset(y: yrsY)
                         .animation(.easeInOut)
-                        .onTapGesture {
-                            frvW = CAGRCellWidth
-                            tovW = CAGRCellWidth
-                            yrsW = UIScreen.main.bounds.size.width
-                            cagrW = CAGRCellWidth
-                            frvCR = CAGRCornerRadius
-                            tovCR = CAGRCornerRadius
-                            yrsCR = 0
-                            cagrCR = CAGRCornerRadius
-                            frvY = cellHeight + CAGRPadding
-                            tovY = (cellHeight + CAGRPadding) * 2
-                            yrsY = 0
-                            cagrY = (cellHeight + CAGRPadding) * 3
-                        }
 
-                        VStack {
-                            Text("CAGR")
-                                .foregroundColor(Color("text"))
-                                .font(.custom(CAGRFont, size: 24))
+                        GeometryReader { geometry in
+                            HStack {
+                                Text("CAGR")
+                                    .foregroundColor(Color("text"))
+                                    .font(.custom(CAGRFont, size: 24))
+                                    .frame(width: geometry.size.height, height: geometry.size.height)
+                                    .background(Color("cell"))
+                                    .onTapGesture {
+                                        frvIsOutput = false
+                                        tovIsOutput = false
+                                        yrsIsOutput = false
+                                        cagrIsOutput = true
+                                        frvW = CAGRCellWidth
+                                        tovW = CAGRCellWidth
+                                        yrsW = CAGRCellWidth
+                                        cagrW = UIScreen.main.bounds.size.width
+                                        frvCR = CAGRCornerRadius
+                                        tovCR = CAGRCornerRadius
+                                        yrsCR = CAGRCornerRadius
+                                        cagrCR = 0
+                                        frvY = cellHeight + CAGRPadding
+                                        tovY = (cellHeight + CAGRPadding) * 2
+                                        yrsY = (cellHeight + CAGRPadding) * 3
+                                        cagrY = 0
+                                    }
+                                Spacer()
+                                    .frame(width: CAGRGap, height: geometry.size.height)
+                                    .background(Color(cagrIsOutput ? "cell" : "bg"))
+                                Text("47%")
+                                    .foregroundColor(Color("text"))
+                                    .font(.custom(CAGRFont, size: 64))
+                                    .padding(.trailing, CAGRPadding)
+                                    .frame(width: geometry.size.width - geometry.size.height - CAGRGap,
+                                           height: geometry.size.height,
+                                           alignment: .trailing)
+                            }
                         }
                         .frame(width: cagrW, height: cellHeight)
                         .background(Color("cell"))
                         .cornerRadius(cagrCR)
                         .offset(y: cagrY)
                         .animation(.easeInOut)
-                        .onTapGesture {
-                            frvW = CAGRCellWidth
-                            tovW = CAGRCellWidth
-                            yrsW = CAGRCellWidth
-                            cagrW = UIScreen.main.bounds.size.width
-                            frvCR = CAGRCornerRadius
-                            tovCR = CAGRCornerRadius
-                            yrsCR = CAGRCornerRadius
-                            cagrCR = 0
-                            frvY = cellHeight + CAGRPadding
-                            tovY = (cellHeight + CAGRPadding) * 2
-                            yrsY = (cellHeight + CAGRPadding) * 3
-                            cagrY = 0
-                        }
                     }
                     .frame(width: geometry.size.width,
                            height: geometry.size.height * topSectionPercent)

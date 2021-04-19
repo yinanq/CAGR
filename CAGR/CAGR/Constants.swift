@@ -21,5 +21,6 @@ let CAGRCellColor = Color.white
 let CAGRFont = "Gruppo"
 let CAGRPadding: CGFloat = 20
 let CAGRCornerRadius: CGFloat = 20
+let CAGRGap: CGFloat = 1
 
 let CAGRCellWidth = UIScreen.main.bounds.size.width - CAGRPadding * 2
