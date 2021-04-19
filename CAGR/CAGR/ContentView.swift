@@ -16,16 +16,6 @@ struct ContentView: View {
     @State private var yrsIsOutput = false
     @State private var cagrIsOutput = true
     
-    @State private var frvW = CAGRCellWidth
-    @State private var tovW = CAGRCellWidth
-    @State private var yrsW = CAGRCellWidth
-    @State private var cagrW = UIScreen.main.bounds.size.width
-    
-    @State private var frvCR = CAGRCornerRadius
-    @State private var tovCR = CAGRCornerRadius
-    @State private var yrsCR = CAGRCornerRadius
-    @State private var cagrCR: CGFloat = 0
-    
     @State private var cellHeight: CGFloat = 0
     
     @State private var frvY: CGFloat = 0
@@ -63,14 +53,6 @@ struct ContentView: View {
                                         tovIsOutput = false
                                         yrsIsOutput = false
                                         cagrIsOutput = false
-                                        frvW = UIScreen.main.bounds.size.width
-                                        tovW = CAGRCellWidth
-                                        yrsW = CAGRCellWidth
-                                        cagrW = CAGRCellWidth
-                                        frvCR = 0
-                                        tovCR = CAGRCornerRadius
-                                        yrsCR = CAGRCornerRadius
-                                        cagrCR = CAGRCornerRadius
                                         frvY = 0
                                         tovY = cellHeight + CAGRPadding
                                         yrsY = (cellHeight + CAGRPadding) * 2
@@ -88,9 +70,10 @@ struct ContentView: View {
                                            alignment: .trailing)
                             }
                         }
-                        .frame(width: frvW, height: cellHeight)
+                        .frame(width: frvIsOutput ? UIScreen.main.bounds.size.width : CAGRCellWidth,
+                               height: cellHeight)
                         .background(Color("cell"))
-                        .cornerRadius(frvCR)
+                        .cornerRadius(frvIsOutput ? 0 : CAGRCornerRadius)
                         .offset(y: frvY)
                         .animation(.easeInOut)
 
@@ -106,14 +89,6 @@ struct ContentView: View {
                                         tovIsOutput = true
                                         yrsIsOutput = false
                                         cagrIsOutput = false
-                                        frvW = CAGRCellWidth
-                                        tovW = UIScreen.main.bounds.size.width
-                                        yrsW = CAGRCellWidth
-                                        cagrW = CAGRCellWidth
-                                        frvCR = CAGRCornerRadius
-                                        tovCR = 0
-                                        yrsCR = CAGRCornerRadius
-                                        cagrCR = CAGRCornerRadius
                                         frvY = cellHeight + CAGRPadding
                                         tovY = 0
                                         yrsY = (cellHeight + CAGRPadding) * 2
@@ -131,9 +106,10 @@ struct ContentView: View {
                                            alignment: .trailing)
                             }
                         }
-                        .frame(width: tovW, height: cellHeight)
+                        .frame(width: tovIsOutput ? UIScreen.main.bounds.size.width : CAGRCellWidth,
+                               height: cellHeight)
                         .background(Color("cell"))
-                        .cornerRadius(tovCR)
+                        .cornerRadius(tovIsOutput ? 0 : CAGRCornerRadius)
                         .offset(y: tovY)
                         .animation(.easeInOut)
 
@@ -149,14 +125,6 @@ struct ContentView: View {
                                         tovIsOutput = false
                                         yrsIsOutput = true
                                         cagrIsOutput = false
-                                        frvW = CAGRCellWidth
-                                        tovW = CAGRCellWidth
-                                        yrsW = UIScreen.main.bounds.size.width
-                                        cagrW = CAGRCellWidth
-                                        frvCR = CAGRCornerRadius
-                                        tovCR = CAGRCornerRadius
-                                        yrsCR = 0
-                                        cagrCR = CAGRCornerRadius
                                         frvY = cellHeight + CAGRPadding
                                         tovY = (cellHeight + CAGRPadding) * 2
                                         yrsY = 0
@@ -174,9 +142,10 @@ struct ContentView: View {
                                            alignment: .trailing)
                             }
                         }
-                        .frame(width: yrsW, height: cellHeight)
+                        .frame(width: yrsIsOutput ? UIScreen.main.bounds.size.width : CAGRCellWidth,
+                               height: cellHeight)
                         .background(Color("cell"))
-                        .cornerRadius(yrsCR)
+                        .cornerRadius(yrsIsOutput ? 0 : CAGRCornerRadius)
                         .offset(y: yrsY)
                         .animation(.easeInOut)
 
@@ -192,14 +161,6 @@ struct ContentView: View {
                                         tovIsOutput = false
                                         yrsIsOutput = false
                                         cagrIsOutput = true
-                                        frvW = CAGRCellWidth
-                                        tovW = CAGRCellWidth
-                                        yrsW = CAGRCellWidth
-                                        cagrW = UIScreen.main.bounds.size.width
-                                        frvCR = CAGRCornerRadius
-                                        tovCR = CAGRCornerRadius
-                                        yrsCR = CAGRCornerRadius
-                                        cagrCR = 0
                                         frvY = cellHeight + CAGRPadding
                                         tovY = (cellHeight + CAGRPadding) * 2
                                         yrsY = (cellHeight + CAGRPadding) * 3
@@ -217,9 +178,10 @@ struct ContentView: View {
                                            alignment: .trailing)
                             }
                         }
-                        .frame(width: cagrW, height: cellHeight)
+                        .frame(width: cagrIsOutput ? UIScreen.main.bounds.size.width : CAGRCellWidth,
+                               height: cellHeight)
                         .background(Color("cell"))
-                        .cornerRadius(cagrCR)
+                        .cornerRadius(cagrIsOutput ? 0 : CAGRCornerRadius)
                         .offset(y: cagrY)
                         .animation(.easeInOut)
                     }
