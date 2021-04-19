@@ -14,13 +14,15 @@ enum Output {
     case cagr
 }
 
-let topSectionPercent: CGFloat = 0.7
+let topSectionPercent: CGFloat = 0.63
 let bottomSectionPercent = 1 - topSectionPercent
 
 let CAGRCellColor = Color.white
 let CAGRFont = "Gruppo"
+let CAGRFontSizeSmall: CGFloat = 20
+let CAGRFontSizeBig: CGFloat = 64
 let CAGRPadding: CGFloat = 20
 let CAGRCornerRadius: CGFloat = 20
-let CAGRGap: CGFloat = 1
+let CAGRGap: CGFloat = 2
 
 let CAGRCellWidth = UIScreen.main.bounds.size.width - CAGRPadding * 2
