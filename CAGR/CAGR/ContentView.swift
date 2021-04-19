@@ -45,7 +45,7 @@ struct ContentView: View {
                             HStack {
                                 Text("from")
                                     .foregroundColor(Color("text"))
-                                    .font(.custom(CAGRFont, size: CAGRFontSizeSmall))
+                                    .font(.custom(CAGRFontForLabel, size: CAGRFontSizeForLabel))
                                     .frame(width: geometry.size.height, height: geometry.size.height)
                                     .background(Color("cell"))
                                     .onTapGesture {
@@ -63,7 +63,7 @@ struct ContentView: View {
                                     .background(Color(frvIsOutput ? "cell" : "bg"))
                                 Text("10")
                                     .foregroundColor(Color("text"))
-                                    .font(.custom(CAGRFont, size: CAGRFontSizeBig))
+                                    .font(.custom(CAGRFontForContent, size: CAGRFontSizeForContent))
                                     .padding(.trailing, CAGRPadding)
                                     .frame(width: geometry.size.width - geometry.size.height - CAGRGap,
                                            height: geometry.size.height,
@@ -81,7 +81,7 @@ struct ContentView: View {
                             HStack {
                                 Text("to")
                                     .foregroundColor(Color("text"))
-                                    .font(.custom(CAGRFont, size: CAGRFontSizeSmall))
+                                    .font(.custom(CAGRFontForLabel, size: CAGRFontSizeForLabel))
                                     .frame(width: geometry.size.height, height: geometry.size.height)
                                     .background(Color("cell"))
                                     .onTapGesture {
@@ -99,7 +99,7 @@ struct ContentView: View {
                                     .background(Color(tovIsOutput ? "cell" : "bg"))
                                 Text("69")
                                     .foregroundColor(Color("text"))
-                                    .font(.custom(CAGRFont, size: CAGRFontSizeBig))
+                                    .font(.custom(CAGRFontForContent, size: CAGRFontSizeForContent))
                                     .padding(.trailing, CAGRPadding)
                                     .frame(width: geometry.size.width - geometry.size.height - CAGRGap,
                                            height: geometry.size.height,
@@ -117,7 +117,7 @@ struct ContentView: View {
                             HStack {
                                 Text("years")
                                     .foregroundColor(Color("text"))
-                                    .font(.custom(CAGRFont, size: CAGRFontSizeSmall))
+                                    .font(.custom(CAGRFontForLabel, size: CAGRFontSizeForLabel))
                                     .frame(width: geometry.size.height, height: geometry.size.height)
                                     .background(Color("cell"))
                                     .onTapGesture {
@@ -135,7 +135,7 @@ struct ContentView: View {
                                     .background(Color(yrsIsOutput ? "cell" : "bg"))
                                 Text("5")
                                     .foregroundColor(Color("text"))
-                                    .font(.custom(CAGRFont, size: CAGRFontSizeBig))
+                                    .font(.custom(CAGRFontForContent, size: CAGRFontSizeForContent))
                                     .padding(.trailing, CAGRPadding)
                                     .frame(width: geometry.size.width - geometry.size.height - CAGRGap,
                                            height: geometry.size.height,
@@ -153,7 +153,7 @@ struct ContentView: View {
                             HStack {
                                 Text("CAGR")
                                     .foregroundColor(Color("text"))
-                                    .font(.custom(CAGRFont, size: CAGRFontSizeSmall))
+                                    .font(.custom(CAGRFontForLabel, size: CAGRFontSizeForLabel))
                                     .frame(width: geometry.size.height, height: geometry.size.height)
                                     .background(Color("cell"))
                                     .onTapGesture {
@@ -171,7 +171,7 @@ struct ContentView: View {
                                     .background(Color(cagrIsOutput ? "cell" : "bg"))
                                 Text("47%")
                                     .foregroundColor(Color("text"))
-                                    .font(.custom(CAGRFont, size: CAGRFontSizeBig))
+                                    .font(.custom(CAGRFontForContent, size: CAGRFontSizeForContent))
                                     .padding(.trailing, CAGRPadding)
                                     .frame(width: geometry.size.width - geometry.size.height - CAGRGap,
                                            height: geometry.size.height,
