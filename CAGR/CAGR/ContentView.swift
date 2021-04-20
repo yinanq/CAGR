@@ -1,6 +1,6 @@
 //
 //  ContentView.swift
-//  CAGR
+//  cagr
 //
 //  Created by Yinan Qiu on 4/3/21.
 //
@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
-
-//    @StateObject var viewModel = ContentViewModel()
+    
+    //    @StateObject var viewModel = ContentViewModel()
     
     @State private var frvIsOutput = false
     @State private var tovIsOutput = false
@@ -30,7 +30,7 @@ struct ContentView: View {
                 .edgesIgnoringSafeArea(.all)
             
             GeometryReader { geometry in
-                VStack {
+                VStack(spacing: 0) {
                     ZStack(alignment: .top) { //main content area aka area above number pad
                         Color("bg")
                             .onAppear {
@@ -40,10 +40,10 @@ struct ContentView: View {
                                 yrsY = (cellHeight + CAGRPadding) * 3
                                 cagrY = 0
                             }
-
+                        
                         GeometryReader { geometry in
                             HStack {
-                                Text("from")
+                                Text("From")
                                     .foregroundColor(Color("text"))
                                     .font(.custom(CAGRFontForLabel, size: CAGRFontSizeForLabel))
                                     .frame(width: geometry.size.height, height: geometry.size.height)
@@ -65,9 +65,7 @@ struct ContentView: View {
                                     .foregroundColor(Color("text"))
                                     .font(.custom(CAGRFontForContent, size: CAGRFontSizeForContent))
                                     .padding(.trailing, CAGRPadding)
-                                    .frame(width: geometry.size.width - geometry.size.height - CAGRGap,
-                                           height: geometry.size.height,
-                                           alignment: .trailing)
+                                    .frame(maxWidth: .infinity, maxHeight: geometry.size.height, alignment: .trailing)
                             }
                         }
                         .frame(width: frvIsOutput ? UIScreen.main.bounds.size.width : CAGRCellWidth,
@@ -76,10 +74,10 @@ struct ContentView: View {
                         .cornerRadius(frvIsOutput ? 0 : CAGRCornerRadius)
                         .offset(y: frvY)
                         .animation(.easeInOut)
-
+                        
                         GeometryReader { geometry in
                             HStack {
-                                Text("to")
+                                Text("To")
                                     .foregroundColor(Color("text"))
                                     .font(.custom(CAGRFontForLabel, size: CAGRFontSizeForLabel))
                                     .frame(width: geometry.size.height, height: geometry.size.height)
@@ -101,9 +99,7 @@ struct ContentView: View {
                                     .foregroundColor(Color("text"))
                                     .font(.custom(CAGRFontForContent, size: CAGRFontSizeForContent))
                                     .padding(.trailing, CAGRPadding)
-                                    .frame(width: geometry.size.width - geometry.size.height - CAGRGap,
-                                           height: geometry.size.height,
-                                           alignment: .trailing)
+                                    .frame(maxWidth: .infinity, maxHeight: geometry.size.height, alignment: .trailing)
                             }
                         }
                         .frame(width: tovIsOutput ? UIScreen.main.bounds.size.width : CAGRCellWidth,
@@ -112,10 +108,10 @@ struct ContentView: View {
                         .cornerRadius(tovIsOutput ? 0 : CAGRCornerRadius)
                         .offset(y: tovY)
                         .animation(.easeInOut)
-
+                        
                         GeometryReader { geometry in
                             HStack {
-                                Text("years")
+                                Text("Years")
                                     .foregroundColor(Color("text"))
                                     .font(.custom(CAGRFontForLabel, size: CAGRFontSizeForLabel))
                                     .frame(width: geometry.size.height, height: geometry.size.height)
@@ -137,9 +133,7 @@ struct ContentView: View {
                                     .foregroundColor(Color("text"))
                                     .font(.custom(CAGRFontForContent, size: CAGRFontSizeForContent))
                                     .padding(.trailing, CAGRPadding)
-                                    .frame(width: geometry.size.width - geometry.size.height - CAGRGap,
-                                           height: geometry.size.height,
-                                           alignment: .trailing)
+                                    .frame(maxWidth: .infinity, maxHeight: geometry.size.height, alignment: .trailing)
                             }
                         }
                         .frame(width: yrsIsOutput ? UIScreen.main.bounds.size.width : CAGRCellWidth,
@@ -148,7 +142,7 @@ struct ContentView: View {
                         .cornerRadius(yrsIsOutput ? 0 : CAGRCornerRadius)
                         .offset(y: yrsY)
                         .animation(.easeInOut)
-
+                        
                         GeometryReader { geometry in
                             HStack {
                                 Text("CAGR")
@@ -173,9 +167,7 @@ struct ContentView: View {
                                     .foregroundColor(Color("text"))
                                     .font(.custom(CAGRFontForContent, size: CAGRFontSizeForContent))
                                     .padding(.trailing, CAGRPadding)
-                                    .frame(width: geometry.size.width - geometry.size.height - CAGRGap,
-                                           height: geometry.size.height,
-                                           alignment: .trailing)
+                                    .frame(maxWidth: .infinity, maxHeight: geometry.size.height, alignment: .trailing)
                             }
                         }
                         .frame(width: cagrIsOutput ? UIScreen.main.bounds.size.width : CAGRCellWidth,
@@ -188,17 +180,59 @@ struct ContentView: View {
                     .frame(width: geometry.size.width,
                            height: geometry.size.height * topSectionPercent)
                     
-                    HStack { //custom number pad
+                    VStack(spacing: CAGRGap) { //custom number pad
+                        HStack(spacing: CAGRGap) {
+                            Text("1")
+                                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                                .background(Color("cell"))
+                            Text("2")
+                                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                                .background(Color("cell"))
+                            Text("3")
+                                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                                .background(Color("cell"))
+                        }
+                        HStack(spacing: CAGRGap) {
+                            Text("4")
+                                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                                .background(Color("cell"))
+                            Text("5")
+                                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                                .background(Color("cell"))
+                            Text("6")
+                                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                                .background(Color("cell"))
+                        }
+                        HStack(spacing: CAGRGap) {
+                            Text("7")
+                                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                                .background(Color("cell"))
+                            Text("8")
+                                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                                .background(Color("cell"))
+                            Text("9")
+                                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                                .background(Color("cell"))
+                        }
+                        HStack(spacing: CAGRGap) {
+                            Text(".")
+                                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                                .background(Color("cell"))
+                            Text("0")
+                                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                                .background(Color("cell"))
+                            Text("del")
+                                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                                .background(Color("cell"))
+                        }
                     }
-                    .frame(width: geometry.size.width,
-                           height: geometry.size.height * bottomSectionPercent)
-                    .background(Color("cell"))
+                    .background(Color("bg"))
+                    .font(.custom(CAGRFontForNumberPad, size: CAGRFontSizeForNumberPad))
                 }
             }
         }
     }
 }
-
 
 //struct ContentView_Previews: PreviewProvider {
 //    static var previews: some View {

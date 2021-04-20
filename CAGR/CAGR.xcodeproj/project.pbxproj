@@ -142,7 +142,7 @@
 		F5F90683261994B20015628A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F90682261994B20015628A /* ContentView.swift */; };
 		F5F90685261994B30015628A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5F90684261994B30015628A /* Assets.xcassets */; };
 		F5F90688261994B30015628A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5F90687261994B30015628A /* Preview Assets.xcassets */; };
-		F5F90691261994DA0015628A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F90690261994DA0015628A /* Constants.swift */; };
+		F5F90691261994DA0015628A /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F90690261994DA0015628A /* constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -283,7 +283,7 @@
 		F5F90684261994B30015628A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F5F90687261994B30015628A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F5F90689261994B30015628A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F5F90690261994DA0015628A /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		F5F90690261994DA0015628A /* constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -526,7 +526,7 @@
 			isa = PBXGroup;
 			children = (
 				F5F90680261994B20015628A /* cagrApp.swift */,
-				F5F90690261994DA0015628A /* Constants.swift */,
+				F5F90690261994DA0015628A /* constants.swift */,
 				F5F90682261994B20015628A /* ContentView.swift */,
 				F57696CA261A817500C21A56 /* ContentViewModel.swift */,
 				F58107FF262E474100E9B437 /* fonts */,
@@ -746,7 +746,7 @@
 			files = (
 				F57696CB261A817500C21A56 /* ContentViewModel.swift in Sources */,
 				F5F90683261994B20015628A /* ContentView.swift in Sources */,
-				F5F90691261994DA0015628A /* Constants.swift in Sources */,
+				F5F90691261994DA0015628A /* constants.swift in Sources */,
 				F5F90681261994B20015628A /* cagrApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

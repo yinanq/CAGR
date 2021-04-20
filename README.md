@@ -1,2 +1,0 @@
-# CAGR
- a SwiftUI app
