@@ -17,7 +17,6 @@ enum Output {
 let topSectionPercent: CGFloat = 0.66
 let bottomSectionPercent = 1 - topSectionPercent
 
-let CAGRCellColor = Color.white
 let CAGRFontForLabel = "Saira-SemiBold"
 let CAGRFontForContent = "Saira-Thin"
 let CAGRFontForNumberPad = "Saira-ExtraLight"
@@ -29,3 +28,4 @@ let CAGRCornerRadius: CGFloat = 20
 let CAGRGap: CGFloat = 2
 
 let CAGRCellWidth = UIScreen.main.bounds.size.width - CAGRPadding * 2
+let CAGRLabelFrameWidth: CGFloat = 80
