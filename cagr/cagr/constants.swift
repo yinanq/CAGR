@@ -18,7 +18,7 @@ let topSectionPercent: CGFloat = 0.66
 let bottomSectionPercent = 1 - topSectionPercent
 
 let CAGRFontForLabel = "Saira-SemiBold"
-let CAGRFontForContent = "Saira-Thin"
+let CAGRFontForContent = "Saira-Bold"
 let CAGRFontForNumberPad = "Saira-ExtraLight"
 let CAGRFontSizeForLabel: CGFloat = 14
 let CAGRFontSizeForContent: CGFloat = 60
