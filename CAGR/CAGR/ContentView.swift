@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     
-    //    @StateObject var viewModel = ContentViewModel()
+    @State private var isInputting = false
     
     @State private var frvIsOutput = false
     @State private var tovIsOutput = false
@@ -22,8 +22,6 @@ struct ContentView: View {
     @State private var tovY: CGFloat = 0
     @State private var yrsY: CGFloat = 0
     @State private var cagrY: CGFloat = 0
-    
-    @State private var isInputting = false
     
     var body: some View {
         
@@ -186,7 +184,7 @@ struct ContentView: View {
                     }
                     .frame(width: geometry.size.width,
                            height: geometry.size.height * topSectionPercent)
-                                        
+                    
                     ZStack { //custom number pad
                         Color("cell")
                             .edgesIgnoringSafeArea(.bottom)

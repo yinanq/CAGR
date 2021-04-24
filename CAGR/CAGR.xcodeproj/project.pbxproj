@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F57696CB261A817500C21A56 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57696CA261A817500C21A56 /* ContentViewModel.swift */; };
 		F581088B262E479700E9B437 /* Saira-Italic-VariableFont_wdth,wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F5810801262E479700E9B437 /* Saira-Italic-VariableFont_wdth,wght.ttf */; };
 		F581088C262E479700E9B437 /* Saira-VariableFont_wdth,wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F5810802262E479700E9B437 /* Saira-VariableFont_wdth,wght.ttf */; };
 		F581088D262E479700E9B437 /* Saira_SemiCondensed-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F5810805262E479700E9B437 /* Saira_SemiCondensed-Italic.ttf */; };
@@ -146,7 +145,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F57696CA261A817500C21A56 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		F5810801262E479700E9B437 /* Saira-Italic-VariableFont_wdth,wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira-Italic-VariableFont_wdth,wght.ttf"; sourceTree = "<group>"; };
 		F5810802262E479700E9B437 /* Saira-VariableFont_wdth,wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira-VariableFont_wdth,wght.ttf"; sourceTree = "<group>"; };
 		F5810805262E479700E9B437 /* Saira_SemiCondensed-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Saira_SemiCondensed-Italic.ttf"; sourceTree = "<group>"; };
@@ -528,7 +526,6 @@
 				F5F90680261994B20015628A /* cagrApp.swift */,
 				F5F90690261994DA0015628A /* constants.swift */,
 				F5F90682261994B20015628A /* ContentView.swift */,
-				F57696CA261A817500C21A56 /* ContentViewModel.swift */,
 				F58107FF262E474100E9B437 /* fonts */,
 				F5F90684261994B30015628A /* Assets.xcassets */,
 				F5F90689261994B30015628A /* Info.plist */,
@@ -744,7 +741,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F57696CB261A817500C21A56 /* ContentViewModel.swift in Sources */,
 				F5F90683261994B20015628A /* ContentView.swift in Sources */,
 				F5F90691261994DA0015628A /* constants.swift in Sources */,
 				F5F90681261994B20015628A /* cagrApp.swift in Sources */,
