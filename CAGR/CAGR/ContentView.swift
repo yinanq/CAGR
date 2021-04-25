@@ -23,6 +23,11 @@ struct ContentView: View {
     @State private var yrsY: CGFloat = 0
     @State private var cagrY: CGFloat = 0
     
+    @State private var frv = 10
+    @State private var tov = 69
+    @State private var yrs = 5
+    @State private var cagr = 47
+    
     var body: some View {
         
         ZStack {
@@ -64,7 +69,7 @@ struct ContentView: View {
                                         yrsY = (cellHeight + CAGRPadding) * 2
                                         cagrY = (cellHeight + CAGRPadding) * 3
                                     }
-                                Text("10")
+                                Text("$\(frv)")
                                     .foregroundColor(Color("text"))
                                     .font(.custom(CAGRFontForContent, size: CAGRFontSizeForContent))
                                     .padding(.trailing, CAGRPadding)
@@ -98,7 +103,7 @@ struct ContentView: View {
                                         yrsY = (cellHeight + CAGRPadding) * 2
                                         cagrY = (cellHeight + CAGRPadding) * 3
                                     }
-                                Text("69")
+                                Text("$\(tov)")
                                     .foregroundColor(Color("text"))
                                     .font(.custom(CAGRFontForContent, size: CAGRFontSizeForContent))
                                     .padding(.trailing, CAGRPadding)
@@ -132,7 +137,7 @@ struct ContentView: View {
                                         yrsY = 0
                                         cagrY = (cellHeight + CAGRPadding) * 3
                                     }
-                                Text("5")
+                                Text("\(yrs)")
                                     .foregroundColor(Color("text"))
                                     .font(.custom(CAGRFontForContent, size: CAGRFontSizeForContent))
                                     .padding(.trailing, CAGRPadding)
@@ -166,7 +171,7 @@ struct ContentView: View {
                                         yrsY = (cellHeight + CAGRPadding) * 3
                                         cagrY = 0
                                     }
-                                Text("47%")
+                                Text("\(cagr)%")
                                     .foregroundColor(Color("text"))
                                     .font(.custom(CAGRFontForContent, size: CAGRFontSizeForContent))
                                     .padding(.trailing, CAGRPadding)
